@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Reed</title>
+<meta name="description" content="Toward the Shape of Time. A novel about the distances we cross to find the people we've lost. Coming June 30, 2026.">
+<meta property="og:title" content="Lucas Reed — Toward the Shape of Time">
+<meta property="og:description" content="A novel about the distances we cross to find the people we've lost.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.lucasreedbooks.com">
+<link rel="icon" href="favicon.ico">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e1a;
+  --text:#d4cfc7;
+  --dim:#6b6660;
+  --glow:rgba(201,169,110,.4);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* The sky — a faint radial warmth, like light pollution from a desert town */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 20%, rgba(201,169,110,.03) 0%, transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+
+.page{
+  position:relative;
+  z-index:1;
+  max-width:600px;
+  margin:0 auto;
+  padding:0 28px;
+}
+
+/* Signature — small, top-left, like it's written on the page */
+.sig{
+  padding:48px 0 0;
+  font-size:14px;
+  font-weight:400;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+/* The opening — arrives slowly */
+.opening{
+  padding:18vh 0 12vh;
+}
+.opening p{
+  font-size:clamp(24px,3.8vw,36px);
+  font-weight:300;
+  font-style:italic;
+  line-height:1.55;
+  color:var(--text);
+  opacity:0;
+  transform:translateY(16px);
+  animation:arrive 1.8s ease forwards;
+}
+@keyframes arrive{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* The book — one sentence */
+.book{
+  padding:0 0 10vh;
+}
+.book-title{
+  font-size:clamp(18px,2.4vw,22px);
+  font-weight:500;
+  letter-spacing:.06em;
+  margin-bottom:16px;
+  color:var(--text);
+}
+.book-line{
+  font-size:clamp(16px,2vw,19px);
+  font-weight:300;
+  line-height:1.7;
+  color:var(--dim);
+}
+.book-date{
+  margin-top:20px;
+  font-size:14px;
+  font-weight:400;
+  color:var(--dim);
+  letter-spacing:.04em;
+}
+
+/* The fragment — Henry's notebook, found like a page left behind */
+.fragment{
+  padding:8vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
+}
+.notebook{
+  font-family:'Courier New',Courier,monospace;
+  font-size:clamp(12.5px,1.6vw,14.5px);
+  line-height:1.85;
+  color:var(--dim);
+  padding-left:24px;
+  border-left:2px solid rgba(201,169,110,.12);
+  opacity:0;
+  animation:arrive 2s ease 0.6s forwards;
+}
+.notebook em{
+  font-style:normal;
+  color:var(--text);
+}
+.notebook-attr{
+  margin-top:20px;
+  font-family:var(--serif);
+  font-size:13px;
+  font-style:italic;
+  color:rgba(201,169,110,.35);
+  letter-spacing:.02em;
+}
+
+/* The cover mockup */
+.book-cover{
+  display:flex;
+  justify-content:center;
+  margin-bottom:40px;
+}
+.cover-mock{
+  width:240px;
+  height:360px;
+  background:linear-gradient(145deg, #12161f 0%, #0d1018 40%, #111822 100%);
+  border:1px solid rgba(201,169,110,.1);
+  border-radius:3px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:32px 24px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:8px 8px 24px rgba(0,0,0,.5), -2px -2px 8px rgba(201,169,110,.02);
+}
+.cover-top{
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:auto;
+  padding-top:8px;
+}
+.cover-title{
+  font-family:var(--serif);
+  font-size:26px;
+  font-weight:400;
+  line-height:1.25;
+  color:var(--text);
+  letter-spacing:.02em;
+}
+.cover-author{
+  font-size:12px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-top:auto;
+  padding-bottom:8px;
+}
+.cover-glow{
+  position:absolute;
+  bottom:40%;
+  left:50%;
+  transform:translateX(-50%);
+  width:60px;
+  height:60px;
+  background:radial-gradient(circle, rgba(201,169,110,.08) 0%, transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+/* The chapter — a taste */
+.chapter{
+  padding:8vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
+}
+.chapter-label{
+  font-size:13px;
+  font-style:italic;
+  color:var(--dim);
+  margin-bottom:32px;
+  letter-spacing:.04em;
+}
+.chapter-text p{
+  font-size:clamp(15px,1.9vw,17.5px);
+  font-weight:300;
+  line-height:1.85;
+  color:var(--text);
+  margin-bottom:20px;
+  text-indent:1.5em;
+}
+.chapter-text p:first-child{
+  text-indent:0;
+}
+
+/* The signal — email field */
+.signal{
+  padding:10vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
+}
+.signal-prompt{
+  font-size:15px;
+  font-style:italic;
+  color:var(--dim);
+  margin-bottom:24px;
+}
+.signal-form{
+  display:flex;
+  gap:0;
+  max-width:400px;
+}
+.signal-form input{
+  flex:1;
+  padding:14px 16px;
+  background:rgba(212,207,199,.04);
+  border:1px solid rgba(201,169,110,.12);
+  border-right:none;
+  color:var(--text);
+  font-family:var(--serif);
+  font-size:15px;
+  outline:none;
+  border-radius:2px 0 0 2px;
+  transition:border-color .3s;
+}
+.signal-form input::placeholder{
+  color:var(--dim);
+  font-style:italic;
+}
+.signal-form input:focus{
+  border-color:var(--glow);
+}
+.signal-form button{
+  padding:14px 24px;
+  background:transparent;
+  border:1px solid rgba(201,169,110,.12);
+  color:var(--dim);
+  font-family:var(--serif);
+  font-size:14px;
+  font-style:italic;
+  cursor:pointer;
+  border-radius:0 2px 2px 0;
+  transition:all .3s;
+  white-space:nowrap;
+}
+.signal-form button:hover{
+  color:var(--text);
+  border-color:var(--glow);
+  background:rgba(201,169,110,.04);
+}
+.signal-note{
+  margin-top:16px;
+  font-size:12px;
+  color:var(--dim);
+  opacity:.5;
+}
+
+/* The ground — name and origin */
+.ground{
+  padding:12vh 0 6vh;
+  border-top:1px solid rgba(201,169,110,.08);
+}
+.ground p{
+  font-size:14px;
+  font-weight:300;
+  color:var(--dim);
+  line-height:1.8;
+}
+.ground a{
+  color:var(--dim);
+  text-decoration:none;
+  transition:color .3s;
+}
+.ground a:hover{
+  color:var(--glow);
+}
+
+.author-photo{
+  width:120px;
+  height:150px;
+  border-radius:4px;
+  object-fit:cover;
+  object-position:top;
+  margin-bottom:16px;
+  border:1px solid rgba(201,169,110,.1);
+  opacity:.85;
+}
+
+/* Imprint */
+.imprint{
+  padding:0 0 48px;
+  font-size:12px;
+  color:var(--dim);
+  opacity:.3;
+}
+.imprint a{
+  color:var(--dim);
+  text-decoration:none;
+  transition:color .3s;
+}
+.imprint a:hover{
+  color:var(--text);
+  opacity:1;
+}
+
+/* Stars — subtle, a few fixed points of light */
+.star{
+  position:fixed;
+  width:1px;
+  height:1px;
+  background:var(--text);
+  border-radius:50%;
+  opacity:0;
+  animation:twinkle var(--d) ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0}
+  50%{opacity:var(--o)}
+}
+
+@media(max-width:600px){
+  .page{padding:0 22px}
+  .opening{padding:14vh 0 10vh}
+  .sig{padding-top:32px}
+  .notebook{padding-left:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- A few stars. Not many. Just enough to notice. -->
+<div class="star" style="top:12%;left:23%;--d:4.2s;--o:.15"></div>
+<div class="star" style="top:8%;left:67%;--d:5.8s;--o:.2"></div>
+<div class="star" style="top:34%;left:82%;--d:3.9s;--o:.1"></div>
+<div class="star" style="top:56%;left:11%;--d:6.5s;--o:.12"></div>
+<div class="star" style="top:71%;left:91%;--d:4.7s;--o:.18"></div>
+<div class="star" style="top:19%;left:45%;--d:7.1s;--o:.08"></div>
+<div class="star" style="top:88%;left:34%;--d:5.3s;--o:.14"></div>
+<div class="star" style="top:43%;left:56%;--d:8.2s;--o:.06"></div>
+
+<div class="page">
+
+  <div class="sig">Lucas Reed</div>
+
+  <div class="opening">
+    <p>Some connections cross light-years. Others cross time. The rarest ones cross both.</p>
+  </div>
+
+  <div class="book">
+    <div class="book-cover">
+      <div class="cover-mock">
+        <div class="cover-top">A Novel</div>
+        <div class="cover-title">Toward<br>the Shape<br>of Time</div>
+        <div class="cover-author">Lucas Reed</div>
+        <div class="cover-glow"></div>
+      </div>
+    </div>
+    <div class="book-line">A novel about the distances we cross to find the people we've lost.</div>
+    <div class="book-date">June 30, 2026</div>
+  </div>
+
+  <div class="fragment">
+    <div class="notebook">
+      <em>It isn't a door.</em> I need to stop thinking of it that way. A door implies an opening, a handle you can reach for. What I've been measuring is closer to a wound. A place where the tissue between two systems has worn thin enough to tear.<br><br>
+      I still have not shared my findings with anyone. (or anything).
+    </div>
+    <div class="notebook-attr">— Henry Kairos, Personal Research Notebook, Entry 64</div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-label">From Chapter 1</div>
+    <div class="chapter-text">
+      <p>Theo woke to the taste of copper and the knowledge that he was not where he had been.</p>
+      <p>Not groggy. Not slow. The opposite. Every nerve firing at once, the way the body responds to a car wreck before the mind catches up.</p>
+      <p>He opened his eyes and the sky was wrong.</p>
+    </div>
+    <div style="margin-top:32px"><a href="chapter1.html" style="font-size:15px;font-style:italic;color:var(--dim);text-decoration:none;border-bottom:1px solid rgba(201,169,110,.12);padding-bottom:2px;transition:all .3s">Continue reading &rarr;</a></div>
+  </div>
+
+  <div class="signal" id="signal">
+    <div class="signal-prompt">Leave your frequency.</div>
+    <form class="signal-form" action="https://formspree.io/f/xqeypwqz" method="POST">
+      <input type="email" name="email" placeholder="you@yours.com" required>
+      <input type="hidden" name="_subject" value="New signal — lucasreedbooks.com">
+      <button type="submit">Send</button>
+    </form>
+    <div class="signal-note">Sign up for book updates and release dates.</div>
+  </div>
+
+  <div class="ground">
+    <img src="author.jpg" alt="Lucas Reed" class="author-photo">
+    <p>Lucas Reed writes from Highland, California. <a href="about.html" style="color:var(--dim);border-bottom:1px solid rgba(201,169,110,.12);text-decoration:none;padding-bottom:1px;transition:all .3s">About &rarr;</a></p>
+    <p style="margin-top:20px"><a href="mailto:lucasreedauthor@gmail.com">lucasreedauthor@gmail.com</a></p>
+  </div>
+
+  <div class="imprint">
+    <a href="https://www.nextpageco.com">Next Page Press</a> · Highland, California
+  </div>
+
+</div>
+
+</body>
+</html>

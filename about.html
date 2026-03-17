@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Lucas Reed</title>
+<meta name="description" content="About Lucas Reed, author of Toward the Shape of Time.">
+<meta property="og:title" content="About — Lucas Reed">
+<meta property="og:description" content="Lucas Reed writes from Highland, California, where the mountains hold their dark shape against the sky.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.lucasreedbooks.com/about.html">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e1a;
+  --text:#d4cfc7;
+  --dim:#6b6660;
+  --glow:rgba(201,169,110,.4);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 20%, rgba(201,169,110,.03) 0%, transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+.page{
+  position:relative;
+  z-index:1;
+  max-width:600px;
+  margin:0 auto;
+  padding:0 28px;
+}
+.back{
+  padding:48px 0 0;
+  font-size:14px;
+  font-style:italic;
+  letter-spacing:.04em;
+}
+.back a{
+  color:var(--dim);
+  text-decoration:none;
+  transition:color .3s;
+}
+.back a:hover{color:var(--text)}
+.heading{
+  padding:10vh 0 6vh;
+  text-align:center;
+}
+.heading h1{
+  font-size:clamp(28px,4vw,38px);
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.04em;
+}
+.photo-container{
+  text-align:center;
+  margin-bottom:6vh;
+}
+.photo-container img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:1px solid rgba(201,169,110,.12);
+  opacity:.9;
+}
+.photo-placeholder{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  margin:0 auto;
+  border:1px dashed rgba(201,169,110,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--dim);
+  font-size:13px;
+  font-style:italic;
+}
+.bio{
+  padding:0 0 6vh;
+}
+.bio p{
+  font-size:clamp(15px,1.9vw,17.5px);
+  font-weight:300;
+  line-height:1.85;
+  color:var(--text);
+  margin-bottom:24px;
+}
+.bio p:last-child{margin-bottom:0}
+.details{
+  padding:6vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
+}
+.details h2{
+  font-size:14px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:20px;
+}
+.detail-list{
+  list-style:none;
+  padding:0;
+}
+.detail-list li{
+  font-size:15px;
+  font-weight:300;
+  line-height:1.8;
+  color:var(--text);
+  padding:4px 0;
+}
+.detail-list li span{
+  color:var(--dim);
+  margin-right:8px;
+}
+.contact{
+  padding:6vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
+  text-align:center;
+}
+.contact a{
+  font-size:15px;
+  color:var(--dim);
+  text-decoration:none;
+  border-bottom:1px solid rgba(201,169,110,.12);
+  padding-bottom:2px;
+  transition:all .3s;
+}
+.contact a:hover{
+  color:var(--text);
+  border-color:var(--glow);
+}
+.imprint{
+  padding:8vh 0 6vh;
+  text-align:center;
+  font-size:13px;
+  color:var(--dim);
+  font-style:italic;
+  letter-spacing:.02em;
+}
+.imprint a{
+  color:var(--dim);
+  text-decoration:none;
+  border-bottom:1px solid rgba(201,169,110,.06);
+}
+.imprint a:hover{color:var(--text)}
+.star{
+  position:fixed;
+  width:1px;
+  height:1px;
+  background:var(--text);
+  border-radius:50%;
+  opacity:0;
+  animation:twinkle var(--d) ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0}
+  50%{opacity:var(--o)}
+}
+@media(max-width:600px){
+  .page{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="star" style="top:12%;left:23%;--d:4.2s;--o:.15"></div>
+<div class="star" style="top:8%;left:67%;--d:5.8s;--o:.2"></div>
+<div class="star" style="top:34%;left:82%;--d:3.9s;--o:.1"></div>
+<div class="star" style="top:56%;left:11%;--d:6.5s;--o:.12"></div>
+<div class="star" style="top:71%;left:91%;--d:4.7s;--o:.18"></div>
+
+<div class="page">
+
+  <div class="back"><a href="index.html">&larr; Back</a></div>
+
+  <div class="heading">
+    <h1>About</h1>
+  </div>
+
+  <div class="photo-container">
+    <div class="photo-placeholder">Photo coming soon</div>
+  </div>
+
+  <div class="bio">
+    <p>Lucas Reed is an engineer, musician, and writer from Highland, California, where the San Bernardino Mountains hold their dark shape against the sky and the wind through San Gorgonio Pass sounds like something trying to speak.</p>
+
+    <p>By day he builds infrastructure for the freight and passenger rail systems that move the West Coast. By night he writes about the distances between worlds, the ones we can measure and the ones we can't.</p>
+
+    <p><em>Toward the Shape of Time</em> is his first novel. It began as a question he couldn't stop asking: what would a father leave behind if he found a door to somewhere impossible, and what would his son do to follow him through it?</p>
+
+    <p>He lives with his wife Amber, their daughters Margot and Sloane, and two Labradoodles who have never once respected a boundary of any kind.</p>
+  </div>
+
+  <div class="details">
+    <h2>Elsewhere</h2>
+    <ul class="detail-list">
+      <li><span>Book</span> <em>Toward the Shape of Time</em> — June 30, 2026</li>
+      <li><span>Music</span> Original recordings coming 2026</li>
+      <li><span>Shop</span> <a href="https://www.nextpageco.com" style="color:var(--text);text-decoration:none;border-bottom:1px solid rgba(201,169,110,.12)">Next Page Company</a> — laser engraved goods</li>
+    </ul>
+  </div>
+
+  <div class="contact">
+    <a href="mailto:lucasreedauthor@gmail.com">lucasreedauthor@gmail.com</a>
+  </div>
+
+  <div class="imprint">
+    <a href="https://www.nextpageco.com">Next Page Press</a> · Highland, California
+  </div>
+
+</div>
+
+</body>
+</html>
