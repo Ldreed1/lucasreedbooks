@@ -6,7 +6,7 @@
 <title>Chapter One: Arrival — Lucas Reed</title>
 <meta name="description" content="Read Chapter One of Toward the Shape of Time by Lucas Reed.">
 <meta property="og:title" content="Chapter One: Arrival — Toward the Shape of Time">
-<meta property="og:description" content="He was not where he had been. Read the opening chapter of Toward the Shape of Time by Lucas Reed.">
+<meta property="og:description" content="He was not where he had been. He knew it before he opened his eyes.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.lucasreedbooks.com/chapter1.html">
 <link rel="icon" href="favicon.ico">
@@ -61,13 +61,15 @@ body::before{
   padding:10vh 0 2vh;
   text-align:center;
 }
-.heading .chapter-label{
+.chapter-label{
   font-size:13px;
-  letter-spacing:.2em;
+  letter-spacing:.15em;
   text-transform:uppercase;
   color:var(--dim);
-  font-variant:small-caps;
   margin-bottom:12px;
+  font-variant:small-caps;
+  letter-spacing:.1em;
+  font-size:15px;
 }
 .heading h1{
   font-size:clamp(28px,4vw,38px);
@@ -89,21 +91,48 @@ body::before{
 .chapter-body p.no-indent{
   text-indent:0;
 }
-.chapter-body p:last-child{margin-bottom:0}
-.book-footer{
-  padding:8vh 0 4vh;
+.chapter-body p.single-line{
+  text-indent:0;
+  margin-top:32px;
+  margin-bottom:32px;
+}
+.chapter-body blockquote{
+  margin:32px 0;
+  padding:20px 24px;
+  border-left:2px solid rgba(201,169,110,.15);
+  font-style:italic;
+  font-size:clamp(15px,1.9vw,17.5px);
+  font-weight:300;
+  line-height:1.85;
+  color:var(--text);
+  opacity:.9;
+}
+.chapter-body .scene-break{
+  text-align:center;
+  margin:5vh 0;
+  font-size:18px;
+  color:var(--dim);
+  letter-spacing:.5em;
+}
+.chapter-end{
+  padding:8vh 0;
   border-top:1px solid rgba(201,169,110,.08);
   text-align:center;
 }
-.book-footer .book-title{
-  font-size:15px;
+.chapter-end .book-title{
+  font-size:clamp(16px,2vw,19px);
+  font-weight:300;
   font-style:italic;
   color:var(--dim);
-  letter-spacing:.02em;
-  margin-bottom:16px;
+  margin-bottom:12px;
 }
-.book-footer .signal-link{
-  display:inline-block;
+.chapter-end .book-date{
+  font-size:14px;
+  color:var(--dim);
+  letter-spacing:.04em;
+  margin-bottom:24px;
+}
+.chapter-end a{
   font-size:15px;
   color:var(--dim);
   text-decoration:none;
@@ -111,64 +140,71 @@ body::before{
   padding-bottom:2px;
   transition:all .3s;
 }
-.book-footer .signal-link:hover{
+.chapter-end a:hover{
   color:var(--text);
   border-color:var(--glow);
 }
-.newsletter{
-  padding:4vh 0 4vh;
-  text-align:center;
+.signal{
+  padding:8vh 0;
+  border-top:1px solid rgba(201,169,110,.08);
 }
-.newsletter p{
-  font-size:13px;
-  color:var(--dim);
+.signal-prompt{
+  font-size:15px;
   font-style:italic;
-  margin-bottom:16px;
-  letter-spacing:.02em;
+  color:var(--dim);
+  margin-bottom:24px;
 }
-.newsletter form{
+.signal-form{
   display:flex;
-  gap:10px;
-  justify-content:center;
-  max-width:380px;
-  margin:0 auto;
+  gap:0;
+  max-width:400px;
 }
-.newsletter input[type="email"]{
+.signal-form input{
   flex:1;
-  background:transparent;
-  border:1px solid rgba(201,169,110,.15);
+  padding:14px 16px;
+  background:rgba(212,207,199,.04);
+  border:1px solid rgba(201,169,110,.12);
+  border-right:none;
   color:var(--text);
   font-family:var(--serif);
-  font-size:14px;
-  padding:10px 14px;
-  border-radius:0;
+  font-size:15px;
   outline:none;
+  border-radius:2px 0 0 2px;
   transition:border-color .3s;
 }
-.newsletter input[type="email"]::placeholder{
+.signal-form input::placeholder{
   color:var(--dim);
   font-style:italic;
 }
-.newsletter input[type="email"]:focus{
+.signal-form input:focus{
   border-color:var(--glow);
 }
-.newsletter button{
+.signal-form button{
+  padding:14px 24px;
   background:transparent;
-  border:1px solid rgba(201,169,110,.15);
+  border:1px solid rgba(201,169,110,.12);
   color:var(--dim);
   font-family:var(--serif);
-  font-size:13px;
-  letter-spacing:.08em;
-  padding:10px 18px;
+  font-size:14px;
+  font-style:italic;
   cursor:pointer;
+  border-radius:0 2px 2px 0;
   transition:all .3s;
+  white-space:nowrap;
 }
-.newsletter button:hover{
+.signal-form button:hover{
   color:var(--text);
   border-color:var(--glow);
+  background:rgba(201,169,110,.04);
+}
+.signal-note{
+  margin-top:16px;
+  font-size:12px;
+  color:var(--dim);
+  opacity:.5;
 }
 .imprint{
-  padding:4vh 0 6vh;
+  padding:8vh 0 6vh;
   text-align:center;
   font-size:13px;
   color:var(--dim);
@@ -219,6 +255,7 @@ body::before{
   </div>
 
   <div class="chapter-body">
+
     <p class="no-indent">He was not where he had been. He knew it before he opened his eyes. His cheek was pressed into something that pulsed faintly, a rhythm he could feel resonate throughout his body. His skull pounded in a way that suggested violence. Not a headache. Closer to the feeling of being reassembled by someone who doesn't read instructions. His mouth tasted like copper and something else, something chemical and foreign, and his first thought was "I'm alive." His second thought was "that was different than I planned" although he didn't truly know what to expect.</p>
 
     <p>He lay still, thinking. That's what he did when anything in his life felt like it was falling apart. Assessed the situation and came up with a plan. Ran the numbers. He counted. He cataloged. He built a dataset out of chaos because data was the only thing that didn't lie to him, even when it told him something he didn't want to hear.</p>
@@ -231,9 +268,9 @@ body::before{
 
     <p>He stood up. Wiped his hands on his jeans. Looked up.</p>
 
-    <p>Two suns.</p>
+    <p class="single-line">Two suns.</p>
 
-    <p>Everything else he could have explained away. The warm ground. The pulsing. The wrong light. Concussion. Drugs. A dream he'd wake up from in his apartment with Rue on his feet and Elara breathing softly on the other side of the bed. But two suns were two suns. One hung low and swollen and amber-orange, the kind of oversized thing a kid would crayon into the corner of a drawing. The other was higher, smaller, blue-white, sharp enough to make him squint through the canopy. Together they made a light his eyes had no category for. Every shadow came from two directions. Every color leaned toward something that wasn't quite a color he'd seen before.</p>
+    <p class="no-indent">Everything else he could have explained away. The warm ground. The pulsing. The wrong light. Concussion. Drugs. A dream he'd wake up from in his apartment with Rue on his feet and Elara breathing softly on the other side of the bed. But two suns were two suns. One hung low and swollen and amber-orange, the kind of oversized thing a kid would crayon into the corner of a drawing. The other was higher, smaller, blue-white, sharp enough to make him squint through the canopy. Together they made a light his eyes had no category for. Every shadow came from two directions. Every color leaned toward something that wasn't quite a color he'd seen before.</p>
 
     <p>He was not on Earth. He'd known that since the trailhead at San Gorgonio Pass. Since the air tore open. Since the crossing pulled him through something that felt like being turned inside out. But standing here, under two suns, with alien dirt on his face and his phone gone and everything that connected him to the world he'd left sitting on a kitchen counter in Highland, California, knowing it and feeling it were different animals.</p>
 
@@ -241,11 +278,11 @@ body::before{
 
     <p>He did the inventory. It didn't take long.</p>
 
-    <p>No phone. No wallet. No keys. No ID. He patted every pocket the way he'd patted them ten thousand times walking out of his apartment, the mechanical habit of a person who always assumed he was forgetting something because he usually was. All empty. Everything that proved he was Theo Kairos, twenty-seven years old, data analyst, tenant at 601 Greenspot Crossing, Apartment 9, guy who couldn't commit to the woman he lived with, guy who loved his dog more simply than he'd ever loved a person. All of it gone.</p>
+    <p class="no-indent">No phone. No wallet. No keys. No ID. He patted every pocket the way he'd patted them ten thousand times walking out of his apartment, the mechanical habit of a person who always assumed he was forgetting something because he usually was. All empty. Everything that proved he was Theo Kairos, twenty-seven years old, data analyst, tenant at 601 Greenspot Crossing, Apartment 9, guy who couldn't commit to the woman he lived with, guy who loved his dog more simply than he'd ever loved a person. All of it gone.</p>
 
     <p>He had two things.</p>
 
-    <p>The notebook was in his inside jacket. His father's. Leather-bound, pages soft from years of handling, dense with handwriting that shifted between the careful script of a physicist showing his work and the loose scrawl of a man writing too fast because the thing in his head wouldn't wait for his hand to catch up. Theo had read most of it in the eleven days since his mother called. He'd read it at the kitchen table at 2 AM while Elara slept. He'd read it in his car in the parking lot at the pass, engine running, trying to decide if the man who wrote these words was a genius or insane. He'd read the last entry, "nobody comes back," and still put on his jacket and walked out the door.</p>
+    <p class="no-indent">The notebook was in his inside jacket. His father's. Leather-bound, pages soft from years of handling, dense with handwriting that shifted between the careful script of a physicist showing his work and the loose scrawl of a man writing too fast because the thing in his head wouldn't wait for his hand to catch up. Theo had read most of it in the eleven days since his mother called. He'd read it at the kitchen table at 2 AM while Elara slept. He'd read it in his car in the parking lot at the pass, engine running, trying to decide if the man who wrote these words was a genius or insane. He'd read the last entry, "nobody comes back," and still put on his jacket and walked out the door.</p>
 
     <p>The artifact hung on a cord around his neck. Dark metallic material, small like a silver dollar but heavier than it should be. An amber gemstone set into it that caught light at angles that seemed wrong, as if the stone and the photons had a private arrangement that excluded normal physics. It was hot against his chest. Not painful. The heat of a living thing. It pulsed. Slow. Steady. About forty beats per minute. His own heart was running somewhere around ninety. The artifact didn't share his panic.</p>
 
@@ -255,7 +292,7 @@ body::before{
 
     <p>He started walking.</p>
 
-    <p>The forest was massive. Trunks wider than his apartment's living room, covered in a surface that wasn't bark but appeared darker, ridged, almost metallic. Running through it in branching patterns were veins of light. Green-gold. Dim. They pulsed in a synchronized rhythm that made the trees look vascular, as if the whole forest had a circulatory system and the light was its blood.</p>
+    <p class="no-indent">The forest was massive. Trunks wider than his apartment's living room, covered in a surface that wasn't bark but appeared darker, ridged, almost metallic. Running through it in branching patterns were veins of light. Green-gold. Dim. They pulsed in a synchronized rhythm that made the trees look vascular, as if the whole forest had a circulatory system and the light was its blood.</p>
 
     <p>When he passed a trunk, the light shifted. Green-gold warming to blue at the closest point, holding while he was near, fading back as he moved on. He stopped. The blue held. He stepped left. The blue tracked left. He stepped back. It faded. He was being watched. By the trees. By the light. By the system that connected every trunk to every other trunk through the glowing network in the ground beneath his feet.</p>
 
@@ -283,7 +320,9 @@ body::before{
 
     <p>He put the artifact back under his shirt and kept walking. His hand stayed over it. Not for warmth. For the small comfort of holding something that knew what it was doing, because he certainly didn't.</p>
 
-    <p>He thought about Elara while he walked. Not on purpose. She just showed up, the way she always showed up when he was alone and quiet and the thing he'd been using to avoid his feelings temporarily stopped working. Elara in the kitchen, hair up, one of his t-shirts, making eggs that were always slightly overcooked because she refused to stand at the stove and watch them. Elara saying "we should talk about next year" and him saying "yeah, definitely" and both of them knowing "definitely" meant "not tonight."</p>
+    <div class="scene-break">· · ·</div>
+
+    <p class="no-indent">He thought about Elara while he walked. Not on purpose. She just showed up, the way she always showed up when he was alone and quiet and the thing he'd been using to avoid his feelings temporarily stopped working. Elara in the kitchen, hair up, one of his t-shirts, making eggs that were always slightly overcooked because she refused to stand at the stove and watch them. Elara saying "we should talk about next year" and him saying "yeah, definitely" and both of them knowing "definitely" meant "not tonight."</p>
 
     <p>They'd been together two years. Moved in a year ago. Got Rue together because Elara thought a dog might be the commitment he could manage. She was right. He loved that dog with a simplicity and completeness that embarrassed him because he'd never managed to feel that way about a person. Not Elara. Not anyone. He cared about Elara. He liked Elara. He was comfortable with Elara. But there was a glass wall between him and the part of himself that was supposed to say the bigger words and mean them, and he couldn't find the door.</p>
 
@@ -303,11 +342,13 @@ body::before{
 
     <p>The third version was the one on the counter right now, next to the coffee maker, probably still there, probably unread, Elara probably still asleep because it was still early morning on Earth, or whatever morning meant when you were standing on a planet where the suns never set.</p>
 
-    <p class="no-indent">"Elara - I'm sorry I couldn't do this in person, but I was afraid you would talk me out of it. I need to follow something, and I'm not sure when I'll be back. I'm sorry I never gave you what you deserved and I understand if you don't forgive me. But this is something I need to do. I'm going to continue my dad's research. I'll come back for you and Rue."</p>
+    <blockquote>"Elara&mdash;I'm sorry I couldn't do this in person, but I was afraid you would talk me out of it. I need to follow something, and I'm not sure when I'll be back. I'm sorry I never gave you what you deserved and I understand if you don't forgive me. But this is something I need to do. I'm going to continue my dad's research. I'll come back for you and Rue."</blockquote>
 
-    <p>The artifact pulsed hard against his chest. Once. Twice. Faster than its usual rhythm. As if it could feel him sinking into the past and was pulling him back to the present. The amber light in the canopy shifted slightly, warming, and the forest's tracking blue brightened around him. He was still being watched. He was still here. Wherever here was.</p>
+    <p class="no-indent">The artifact pulsed hard against his chest. Once. Twice. Faster than its usual rhythm. As if it could feel him sinking into the past and was pulling him back to the present. The amber light in the canopy shifted slightly, warming, and the forest's tracking blue brightened around him. He was still being watched. He was still here. Wherever here was.</p>
 
-    <p>His legs ached. The low gravity made each step too long and his muscles were compensating in ways they weren't designed for. The air was heavier than he'd noticed at first, thicker, carrying a weight that settled in his lungs after an hour of breathing it. The ground cover released a faint scent when disturbed, something between wet soil and the inside of a greenhouse, alive in a way that ordinary dirt isn't alive.</p>
+    <div class="scene-break">· · ·</div>
+
+    <p class="no-indent">His legs ached. The low gravity made each step too long and his muscles were compensating in ways they weren't designed for. The air was heavier than he'd noticed at first, thicker, carrying a weight that settled in his lungs after an hour of breathing it. The ground cover released a faint scent when disturbed, something between wet soil and the inside of a greenhouse, alive in a way that ordinary dirt isn't alive.</p>
 
     <p>He saw structures forty minutes from his starting point. 2,400 steps, though the number was useless because the gravity was wrong. Lighter than Earth. Every step carried him a fraction further than his body expected. The whole planet had the quality of a dream, slightly too easy, slightly too smooth, as if someone had reduced the friction on reality by a few degrees.</p>
 
@@ -337,11 +378,13 @@ body::before{
 
     <p>On this planet, lying on a floor that was learning the shape of his body, under a sky with two suns and air that tasted like something nobody on Earth had ever tasted, he felt something he hadn't felt in a long time.</p>
 
-    <p>Relief.</p>
+    <p class="single-line">Relief.</p>
 
-    <p>And underneath the relief, the guilt of feeling it.</p>
+    <p class="no-indent">And underneath the relief, the guilt of feeling it.</p>
 
-    <p>He pulled the notebook from his jacket. Held it. Didn't open it. Felt the weight of it in his hands, the leather soft from his father's grip over years of handling. Henry's hands had held these pages. Henry's fingers had turned them. Henry had sat somewhere, maybe in this same forest, maybe in a structure like this one, and written the words Theo was afraid to read because reading them would make this real in a way that lying on an alien floor hadn't yet.</p>
+    <div class="scene-break">· · ·</div>
+
+    <p class="no-indent">He pulled the notebook from his jacket. Held it. Didn't open it. Felt the weight of it in his hands, the leather soft from his father's grip over years of handling. Henry's hands had held these pages. Henry's fingers had turned them. Henry had sat somewhere, maybe in this same forest, maybe in a structure like this one, and written the words Theo was afraid to read because reading them would make this real in a way that lying on an alien floor hadn't yet.</p>
 
     <p>He put the notebook on his chest, next to the artifact. Two things his father had left behind. One full of answers. One full of questions. He wasn't ready for either.</p>
 
@@ -351,32 +394,38 @@ body::before{
 
     <p>He lay there and listened to the forest track his position and the artifact beat its patient forty and the building adjust to his temperature, and he thought about a dog who was waiting by a door for a person who was never coming back through it.</p>
 
-    <p>Somewhere outside, the network hummed. A system that had been processing information for two billion years registered a new variable in the outer ring of its most carefully designed structure. Weight, temperature, heart rate, neural frequency. All logged. All filed. All compared to a dataset it had been waiting to match for longer than the species above it had existed.</p>
+    <div class="scene-break">· · ·</div>
+
+    <p class="no-indent">Somewhere outside, the network hummed. A system that had been processing information for two billion years registered a new variable in the outer ring of its most carefully designed structure. Weight, temperature, heart rate, neural frequency. All logged. All filed. All compared to a dataset it had been waiting to match for longer than the species above it had existed.</p>
 
     <p>And somewhere deeper, past the forest and the settlement and the root clearing where the oldest growth converged, past the sealed nodes and the crystal fields and the boundaries even this vast consciousness couldn't cross, a signal pulsed. Faint. Warm. Patient.</p>
 
     <p>The same rhythm as the artifact.</p>
 
-    <p>A father, calling from the dark. Saying the only thing he could say across the distance between worlds.</p>
+    <p class="no-indent">A father, calling from the dark. Saying the only thing he could say across the distance between worlds.</p>
 
-    <p class="no-indent">"I'm here. Keep coming."</p>
+    <p class="no-indent" style="font-style:italic;text-align:center;margin-top:32px;margin-bottom:32px;">"I'm here. Keep coming."</p>
+
   </div>
 
-  <div class="book-footer">
-    <div class="book-title">Toward the Shape of Time &mdash; November 2026</div>
-    <a href="index.html#signal" class="signal-link">Leave your frequency &rarr;</a>
+  <div class="chapter-end">
+    <div class="book-title">Toward the Shape of Time</div>
+    <div class="book-date">Coming November 2026</div>
+    <a href="index.html#signal">Leave your frequency &rarr;</a>
   </div>
 
-  <div class="newsletter">
-    <p>Stay in the signal</p>
-    <form action="https://formspree.io/f/xqeypwqz" method="POST">
-      <input type="email" name="email" placeholder="your@email.com" required>
-      <button type="submit">Subscribe</button>
+  <div class="signal" id="signal">
+    <div class="signal-prompt">Leave your frequency.</div>
+    <form class="signal-form" action="https://formspree.io/f/xqeypwqz" method="POST">
+      <input type="email" name="email" placeholder="you@yours.com" required>
+      <input type="hidden" name="_subject" value="New signal — lucasreedbooks.com">
+      <button type="submit">Send</button>
     </form>
+    <div class="signal-note">Sign up for book updates and release dates.</div>
   </div>
 
   <div class="imprint">
-    <a href="https://www.nextpageco.com">Next Page Press</a> &middot; Highland, California
+    <a href="https://www.nextpageco.com">Next Page Press</a> · Highland, California
   </div>
 
 </div>
