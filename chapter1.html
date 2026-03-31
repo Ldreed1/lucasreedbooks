@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter One: Arrival — Lucas Reed</title>
+<meta name="description" content="Read Chapter One of Toward the Shape of Time by Lucas Reed.">
+<meta property="og:title" content="Chapter One: Arrival — Toward the Shape of Time">
+<meta property="og:description" content="He was not where he had been. Read the opening chapter of Toward the Shape of Time by Lucas Reed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.lucasreedbooks.com/chapter1.html">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e1a;
+  --text:#e8e4dc;
+  --dim:#6b6660;
+  --glow:rgba(201,169,110,.4);
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--serif);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 20%, rgba(201,169,110,.03) 0%, transparent 50%);
+  pointer-events:none;
+  z-index:0;
+}
+.page{
+  position:relative;
+  z-index:1;
+  max-width:600px;
+  margin:0 auto;
+  padding:0 28px;
+}
+.back{
+  padding:48px 0 0;
+  font-size:14px;
+  font-style:italic;
+  letter-spacing:.04em;
+}
+.back a{
+  color:var(--dim);
+  text-decoration:none;
+  transition:color .3s;
+}
+.back a:hover{color:var(--text)}
+.heading{
+  padding:10vh 0 2vh;
+  text-align:center;
+}
+.heading .chapter-label{
+  font-size:13px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--dim);
+  font-variant:small-caps;
+  margin-bottom:12px;
+}
+.heading h1{
+  font-size:clamp(28px,4vw,38px);
+  font-weight:400;
+  color:var(--text);
+  letter-spacing:.04em;
+}
+.chapter-body{
+  padding:6vh 0;
+}
+.chapter-body p{
+  font-size:clamp(15px,1.9vw,17.5px);
+  font-weight:300;
+  line-height:1.85;
+  color:var(--text);
+  margin-bottom:24px;
+  text-indent:1.5em;
+}
+.chapter-body p.no-indent{
+  text-indent:0;
+}
+.chapter-body p:last-child{margin-bottom:0}
+.book-footer{
+  padding:8vh 0 4vh;
+  border-top:1px solid rgba(201,169,110,.08);
+  text-align:center;
+}
+.book-footer .book-title{
+  font-size:15px;
+  font-style:italic;
+  color:var(--dim);
+  letter-spacing:.02em;
+  margin-bottom:16px;
+}
+.book-footer .signal-link{
+  display:inline-block;
+  font-size:15px;
+  color:var(--dim);
+  text-decoration:none;
+  border-bottom:1px solid rgba(201,169,110,.12);
+  padding-bottom:2px;
+  transition:all .3s;
+}
+.book-footer .signal-link:hover{
+  color:var(--text);
+  border-color:var(--glow);
+}
+.newsletter{
+  padding:4vh 0 4vh;
+  text-align:center;
+}
+.newsletter p{
+  font-size:13px;
+  color:var(--dim);
+  font-style:italic;
+  margin-bottom:16px;
+  letter-spacing:.02em;
+}
+.newsletter form{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  max-width:380px;
+  margin:0 auto;
+}
+.newsletter input[type="email"]{
+  flex:1;
+  background:transparent;
+  border:1px solid rgba(201,169,110,.15);
+  color:var(--text);
+  font-family:var(--serif);
+  font-size:14px;
+  padding:10px 14px;
+  border-radius:0;
+  outline:none;
+  transition:border-color .3s;
+}
+.newsletter input[type="email"]::placeholder{
+  color:var(--dim);
+  font-style:italic;
+}
+.newsletter input[type="email"]:focus{
+  border-color:var(--glow);
+}
+.newsletter button{
+  background:transparent;
+  border:1px solid rgba(201,169,110,.15);
+  color:var(--dim);
+  font-family:var(--serif);
+  font-size:13px;
+  letter-spacing:.08em;
+  padding:10px 18px;
+  cursor:pointer;
+  transition:all .3s;
+}
+.newsletter button:hover{
+  color:var(--text);
+  border-color:var(--glow);
+}
+.imprint{
+  padding:4vh 0 6vh;
+  text-align:center;
+  font-size:13px;
+  color:var(--dim);
+  font-style:italic;
+  letter-spacing:.02em;
+}
+.imprint a{
+  color:var(--dim);
+  text-decoration:none;
+  border-bottom:1px solid rgba(201,169,110,.06);
+}
+.imprint a:hover{color:var(--text)}
+.star{
+  position:fixed;
+  width:1px;
+  height:1px;
+  background:var(--text);
+  border-radius:50%;
+  opacity:0;
+  animation:twinkle var(--d) ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
+}
+@keyframes twinkle{
+  0%,100%{opacity:0}
+  50%{opacity:var(--o)}
+}
+@media(max-width:600px){
+  .page{padding:0 22px}
+}
+</style>
+</head>
+<body>
+
+<div class="star" style="top:12%;left:23%;--d:4.2s;--o:.15"></div>
+<div class="star" style="top:8%;left:67%;--d:5.8s;--o:.2"></div>
+<div class="star" style="top:34%;left:82%;--d:3.9s;--o:.1"></div>
+<div class="star" style="top:56%;left:11%;--d:6.5s;--o:.12"></div>
+<div class="star" style="top:71%;left:91%;--d:4.7s;--o:.18"></div>
+
+<div class="page">
+
+  <div class="back"><a href="index.html">&larr; Back</a></div>
+
+  <div class="heading">
+    <div class="chapter-label">Chapter One</div>
+    <h1>Arrival</h1>
+  </div>
+
+  <div class="chapter-body">
+    <p class="no-indent">He was not where he had been. He knew it before he opened his eyes. His cheek was pressed into something that pulsed faintly, a rhythm he could feel resonate throughout his body. His skull pounded in a way that suggested violence. Not a headache. Closer to the feeling of being reassembled by someone who doesn't read instructions. His mouth tasted like copper and something else, something chemical and foreign, and his first thought was "I'm alive." His second thought was "that was different than I planned" although he didn't truly know what to expect.</p>
+
+    <p>He lay still, thinking. That's what he did when anything in his life felt like it was falling apart. Assessed the situation and came up with a plan. Ran the numbers. He counted. He cataloged. He built a dataset out of chaos because data was the only thing that didn't lie to him, even when it told him something he didn't want to hear.</p>
+
+    <p>He focused on his hands. The ground beneath them was still pulsing. His legs felt heavy but intact, the kind of heavy that follows running a long distance. Something hard and hot pressed into his sternum through his shirt. The artifact. Still there. Still on its cord. His stiff neck felt sore, wrenched, like he'd been grabbed by his skull and pulled through something that wasn't designed for human bodies.</p>
+
+    <p>He opened his eyes and the light was wrong. Amber. Everything was tinted amber, as if the whole world had been photographed through a filter. He didn't know where the light came from. The canopy above him was dense, flat translucent panels of something biological layered over each other, and it should have been dark underneath. Instead the light seemed to come from everywhere at once, like the air itself glowed.</p>
+
+    <p>He pushed himself to his hands and knees. The ground adjusted. Not like sand shifting. Like the surface was reading his weight in real time and reconfiguring to support it. Firmer under his palms where he pressed hard. Softer where his knees settled. The ground seemed to respond to his physical touch.</p>
+
+    <p>He stood up. Wiped his hands on his jeans. Looked up.</p>
+
+    <p>Two suns.</p>
+
+    <p>Everything else he could have explained away. The warm ground. The pulsing. The wrong light. Concussion. Drugs. A dream he'd wake up from in his apartment with Rue on his feet and Elara breathing softly on the other side of the bed. But two suns were two suns. One hung low and swollen and amber-orange, the kind of oversized thing a kid would crayon into the corner of a drawing. The other was higher, smaller, blue-white, sharp enough to make him squint through the canopy. Together they made a light his eyes had no category for. Every shadow came from two directions. Every color leaned toward something that wasn't quite a color he'd seen before.</p>
+
+    <p>He was not on Earth. He'd known that since the trailhead at San Gorgonio Pass. Since the air tore open. Since the crossing pulled him through something that felt like being turned inside out. But standing here, under two suns, with alien dirt on his face and his phone gone and everything that connected him to the world he'd left sitting on a kitchen counter in Highland, California, knowing it and feeling it were different animals.</p>
+
+    <p>The air tasted like wet stone and something sweet. He breathed it and his lungs didn't reject it. Small mercy.</p>
+
+    <p>He did the inventory. It didn't take long.</p>
+
+    <p>No phone. No wallet. No keys. No ID. He patted every pocket the way he'd patted them ten thousand times walking out of his apartment, the mechanical habit of a person who always assumed he was forgetting something because he usually was. All empty. Everything that proved he was Theo Kairos, twenty-seven years old, data analyst, tenant at 601 Greenspot Crossing, Apartment 9, guy who couldn't commit to the woman he lived with, guy who loved his dog more simply than he'd ever loved a person. All of it gone.</p>
+
+    <p>He had two things.</p>
+
+    <p>The notebook was in his inside jacket. His father's. Leather-bound, pages soft from years of handling, dense with handwriting that shifted between the careful script of a physicist showing his work and the loose scrawl of a man writing too fast because the thing in his head wouldn't wait for his hand to catch up. Theo had read most of it in the eleven days since his mother called. He'd read it at the kitchen table at 2 AM while Elara slept. He'd read it in his car in the parking lot at the pass, engine running, trying to decide if the man who wrote these words was a genius or insane. He'd read the last entry, "nobody comes back," and still put on his jacket and walked out the door.</p>
+
+    <p>The artifact hung on a cord around his neck. Dark metallic material, small like a silver dollar but heavier than it should be. An amber gemstone set into it that caught light at angles that seemed wrong, as if the stone and the photons had a private arrangement that excluded normal physics. It was hot against his chest. Not painful. The heat of a living thing. It pulsed. Slow. Steady. About forty beats per minute. His own heart was running somewhere around ninety. The artifact didn't share his panic.</p>
+
+    <p>He'd had it for eleven days. He'd found it on his father's desk, sitting on top of the notebook like a paperweight, the evening his mother called and said your father didn't come home. Picking it up came with a feeling of relief he couldn't explain. A compass needle that had been spinning his entire life suddenly finding north.</p>
+
+    <p>That was a thought he didn't want to examine too closely. The idea that a warm rock could feel like the answer to a question he hadn't known he was asking. It sounded like the kind of thing people said before they joined cults.</p>
+
+    <p>He started walking.</p>
+
+    <p>The forest was massive. Trunks wider than his apartment's living room, covered in a surface that wasn't bark but appeared darker, ridged, almost metallic. Running through it in branching patterns were veins of light. Green-gold. Dim. They pulsed in a synchronized rhythm that made the trees look vascular, as if the whole forest had a circulatory system and the light was its blood.</p>
+
+    <p>When he passed a trunk, the light shifted. Green-gold warming to blue at the closest point, holding while he was near, fading back as he moved on. He stopped. The blue held. He stepped left. The blue tracked left. He stepped back. It faded. He was being watched. By the trees. By the light. By the system that connected every trunk to every other trunk through the glowing network in the ground beneath his feet.</p>
+
+    <p>He kept walking. Not because walking was smart but because standing still in a forest that was tracking him felt worse. At least movement gave him data. Direction. Distance. Terrain changes. His brain was built for pattern recognition and right now it was starving, so he fed it the only way he could: one step at a time, counting as he went.</p>
+
+    <p>The gravity was wrong. Lighter than Earth by what he guessed was five to eight percent. Every step carried him slightly further than his body expected. His inner ear couldn't calibrate. He kept overshooting, landing half a beat early, like walking on a trampoline somebody forgot to tell him about. Twice he stumbled on the ground cover, a low dense material that looked like moss but felt warmer, wetter, more alive than any moss he'd touched. Something moved in his peripheral vision. Quick. Iridescent. Gone when he turned to look. Not an insect. Not a bird. Something that existed in the margins of his sight and refused to be observed directly.</p>
+
+    <p>The sounds were wrong too. Not silence. The forest hummed at a frequency just below what his ears could resolve. A vibration he felt in his jaw more than heard. And layered over it, clicks. Irregular clusters of sharp sounds from somewhere in the canopy. Biological. Probably. But nothing he could map to any animal he knew. No birdsong. No cricket chirp. Just noise from living things he couldn't see, in a pitch range that sat right where the human brain starts filing things under "threat."</p>
+
+    <p>He counted his steps. 800. 1,200. 1,600. Somewhere around 1,400 his right leg buckled. Not fully. Just a half-second where the knee didn't lock and his weight shifted wrong and he caught himself on a trunk. The bark was warm under his palm. The veins flared blue at his touch. His hand was shaking. Both hands were shaking. He held them out in front of him and watched them tremble in the amber light and for one second he wasn't a data analyst building a dataset. He was a twenty-seven-year-old kid standing alone on a planet that wasn't his and nobody in any world knew where he was.</p>
+
+    <p>The second passed. He closed his hands. Kept walking. The analyst came back like a door shutting.</p>
+
+    <p>The trunks were getting wider. The canopy lower. The blue tracking light wasn't just following him anymore. It was running ahead. Rippling forward through the network, lighting up trunks he hadn't reached yet, as if the forest was announcing his position to something further in.</p>
+
+    <p>At around 1,800 steps he stopped. Not because he wanted to. Because the forest stopped with him. The hum cut out. The clicks went silent. The bioluminescence in every trunk within sight froze mid-pulse, holding its color, not shifting, not tracking, just holding. As if the entire system had taken a breath and was waiting to see what he'd do next.</p>
+
+    <p>He stood in the silence for ten seconds. Fifteen. The only sound was his own breathing and the faint beat of the artifact against his sternum. Then, like a switch being flipped, the forest resumed. The hum returned. The clicks scattered through the canopy. The light began pulsing and tracking again. As if nothing had happened. As if the whole network hadn't just paused to look at him.</p>
+
+    <p>He kept walking. Faster now.</p>
+
+    <p>He held the artifact in his hand as he walked. Pulled it out from under his shirt and let it sit in his palm. The warmth intensified. The pulse continued. Forty per minute. And then he noticed something that made him stop walking entirely.</p>
+
+    <p>The veins in the nearest trunk were pulsing at the same rate. Forty per minute. The same as the artifact. He watched them sync for a full minute, counting against his own heartbeat to be sure. The artifact and the forest were on the same clock.</p>
+
+    <p>He put the artifact back under his shirt and kept walking. His hand stayed over it. Not for warmth. For the small comfort of holding something that knew what it was doing, because he certainly didn't.</p>
+
+    <p>He thought about Elara while he walked. Not on purpose. She just showed up, the way she always showed up when he was alone and quiet and the thing he'd been using to avoid his feelings temporarily stopped working. Elara in the kitchen, hair up, one of his t-shirts, making eggs that were always slightly overcooked because she refused to stand at the stove and watch them. Elara saying "we should talk about next year" and him saying "yeah, definitely" and both of them knowing "definitely" meant "not tonight."</p>
+
+    <p>They'd been together two years. Moved in a year ago. Got Rue together because Elara thought a dog might be the commitment he could manage. She was right. He loved that dog with a simplicity and completeness that embarrassed him because he'd never managed to feel that way about a person. Not Elara. Not anyone. He cared about Elara. He liked Elara. He was comfortable with Elara. But there was a glass wall between him and the part of himself that was supposed to say the bigger words and mean them, and he couldn't find the door.</p>
+
+    <p>That was the thing nobody tells you about depression. Not the clinical kind, not the can't-get-out-of-bed kind, but the quiet kind that lives underneath everything like background noise you've had so long you think it's just what silence sounds like. It doesn't make you sad. It makes you flat. It makes the distance between you and the people who love you feel permanent and architectural, as if someone built a wall before you were born and you've been pressing your hand against the glass ever since, watching everyone else on the other side, wondering what they feel that you don't.</p>
+
+    <p>He'd never told Elara about the glass. He'd never told anyone. From the outside it looked like composure. People at work called him calm. His manager said he was "steady under pressure." Caleb, his brother, called him "the one who has his shit together." They were all looking at the same wall and calling it a personality.</p>
+
+    <p>He thought about Rue. Golden labradoodle. Sixty pounds. Ears that flopped in a way that made her look permanently surprised. She slept by the front door because she needed to be the first to know when someone came home. She'd lean her entire weight against your leg on the couch, not for attention, just for confirmation. You're here. You're real. I can feel you.</p>
+
+    <p>She'd heard the door open last night. She'd lifted her head from her bed. Her tail had started the way it always started, the instinctive wag that meant her person was moving and moving might mean outside or food or both. Then the wag had slowed. Something in the way he was standing, the jacket, the bag, the way he didn't bend down to scratch behind her ears, told her this wasn't a regular leaving.</p>
+
+    <p>He couldn't look at her. He'd looked at the door. At the peeling weather strip along the bottom that he'd been meaning to replace for six months. At the scuff on the frame from when they'd moved the bookshelf in and misjudged the angle. He'd looked at everything except the dog because looking at the dog would have ended it.</p>
+
+    <p>He left a note on the counter. He'd written it three times. The first version was honest: "I'm leaving and I don't think I can come back. I'm sorry I never figured out what we were. Take care of Rue." He'd crumpled that one. It read like a suicide note and Elara would call the police and his mother and Caleb and everyone would think he was dead. He wasn't dead. He was just gone. In a direction nobody would believe.</p>
+
+    <p>The second version was a lie: "Going to look into Dad's research. Be back soon. Don't worry." He'd crumpled that one too. Don't worry. As if those words had ever worked on anyone in the history of language.</p>
+
+    <p>The third version was the one on the counter right now, next to the coffee maker, probably still there, probably unread, Elara probably still asleep because it was still early morning on Earth, or whatever morning meant when you were standing on a planet where the suns never set.</p>
+
+    <p class="no-indent">"Elara - I'm sorry I couldn't do this in person, but I was afraid you would talk me out of it. I need to follow something, and I'm not sure when I'll be back. I'm sorry I never gave you what you deserved and I understand if you don't forgive me. But this is something I need to do. I'm going to continue my dad's research. I'll come back for you and Rue."</p>
+
+    <p>The artifact pulsed hard against his chest. Once. Twice. Faster than its usual rhythm. As if it could feel him sinking into the past and was pulling him back to the present. The amber light in the canopy shifted slightly, warming, and the forest's tracking blue brightened around him. He was still being watched. He was still here. Wherever here was.</p>
+
+    <p>His legs ached. The low gravity made each step too long and his muscles were compensating in ways they weren't designed for. The air was heavier than he'd noticed at first, thicker, carrying a weight that settled in his lungs after an hour of breathing it. The ground cover released a faint scent when disturbed, something between wet soil and the inside of a greenhouse, alive in a way that ordinary dirt isn't alive.</p>
+
+    <p>He saw structures forty minutes from his starting point. 2,400 steps, though the number was useless because the gravity was wrong. Lighter than Earth. Every step carried him a fraction further than his body expected. The whole planet had the quality of a dream, slightly too easy, slightly too smooth, as if someone had reduced the friction on reality by a few degrees.</p>
+
+    <p>The structures grew from the ground. Literally. The walls curved up from the root network like the trunks of the trees, the same warm semi-organic material, the same bioluminescent veins running through them. No straight lines. No right angles. Openings with no doors, just smooth gaps where the structure had grown around an absence. He watched from a distance for any signs of movement or life, but the glowing trunks growing out of the ground would have given away his position already, so he walked slowly toward them, keeping his head rotating back and forth, anticipating danger.</p>
+
+    <p>The first structure was bigger than the others. The opening faced away from him. He approached it the way he approached everything that scared him: by pretending he was collecting data instead of terrified. He pressed his back against the exterior wall, feeling it give slightly under his weight, warm through his jacket, and he listened. Nothing. No sound from inside. No movement. Just the low hum of the forest and the pulse of the veins in the wall against his shoulder blades, forty per minute, same as everything.</p>
+
+    <p>He edged around to the opening. Peered inside. The air hit him first. Cleaner than outside. Warmer. Thicker in a way that felt deliberate, as if the building was maintaining its own atmosphere separate from the forest. The interior glowed blue-green, deeper than the forest's amber, and the light came from the walls themselves. Veins of bioluminescence ran through the curved surfaces in branching patterns that looked almost decorative, except nothing on this planet seemed to be decorative. Everything had a function. Everything was infrastructure.</p>
+
+    <p>The space was large and curved, the ceiling rising to a peak far above. No furniture. No objects. No evidence that anything had ever been here. But the surfaces were immaculate. Not a speck of organic debris. Not a leaf. Not a thread of root out of place. The building wasn't just empty. It was maintained. Something was keeping this space clean and ready. For what, he didn't know.</p>
+
+    <p>He stepped inside. The walls brightened. Not dramatically. A subtle increase, maybe ten percent, as if the building had noticed his presence and turned up the lights. He stepped back out. The walls dimmed. Back in. Brighter. Out. Dimmer. He was being acknowledged by architecture.</p>
+
+    <p>He checked two more. Same story. Empty. Clean. Responsive. The temperature shifted to match his body within seconds. In the third one, the floor adjusted when he sat down. Firmer under his lower back. Softer under his shoulders. He lay down and the floor adjusted. Firmer where his back needed it. Softer where his shoulders were tight. The temperature rising at the points where his muscles were coldest, finding the knots, the tension, the places where his body had been clenching since the crossing without his permission. It found all of it. In five seconds.</p>
+
+    <p>Something broke. Small. Quiet. Behind the glass wall, in the place he kept the feelings he didn't have names for, something shifted and his eyes burned and his throat closed and for about three seconds he wasn't analyzing anything. He was just a person lying on a floor that was holding him better than anyone had ever held him, and the kindness of it, the terrible unasked-for precision of it, cracked something he'd been keeping shut for a very long time.</p>
+
+    <p>Then the three seconds ended and the wall rebuilt and he noted, in the flat voice he used for everything, that this floor was better than any bed he'd ever slept in. Better than the mattress Elara had spent three weekends researching before they bought it, the one she was sleeping on right now on a planet where the sun came up once a day and things stayed the same temperature because physics worked the way it was supposed to.</p>
+
+    <p>The floor held him. The ceiling pulsed. The artifact against his chest beat its rhythm. Forty per minute. The same tempo as the walls. The same tempo as the forest. One system. One heartbeat. And he was lying inside it.</p>
+
+    <p>He stared at the ceiling and let the thoughts come. Not the analytical ones. The other ones. The ones that lived in the space below his ribs where the glass wall started.</p>
+
+    <p>He'd left. He'd actually done it. He'd walked through a one-way door because a notebook told him to and a warm rock pointed the way and some part of him, some part he'd spent twenty-seven years pretending didn't exist, had been waiting for a reason to go. Not to Vaelith. Not to find his father. Just to go. Away from the apartment and the job and the girlfriend and the comfortable, stalled, flat life he'd built on top of the glass wall because he didn't know how to build anything on the other side of it.</p>
+
+    <p>That was the thing he couldn't put in the note. The truth underneath the truth. He wasn't just chasing his father. He was running from the person he was afraid he'd be if he stayed. The steady one. The calm one. The one who had his shit together. The one who was going to disappoint Elara slowly instead of all at once, who was going to be adequate instead of extraordinary, who was going to live a life that worked without ever being inspired.</p>
+
+    <p>On this planet, lying on a floor that was learning the shape of his body, under a sky with two suns and air that tasted like something nobody on Earth had ever tasted, he felt something he hadn't felt in a long time.</p>
+
+    <p>Relief.</p>
+
+    <p>And underneath the relief, the guilt of feeling it.</p>
+
+    <p>He pulled the notebook from his jacket. Held it. Didn't open it. Felt the weight of it in his hands, the leather soft from his father's grip over years of handling. Henry's hands had held these pages. Henry's fingers had turned them. Henry had sat somewhere, maybe in this same forest, maybe in a structure like this one, and written the words Theo was afraid to read because reading them would make this real in a way that lying on an alien floor hadn't yet.</p>
+
+    <p>He put the notebook on his chest, next to the artifact. Two things his father had left behind. One full of answers. One full of questions. He wasn't ready for either.</p>
+
+    <p>Tomorrow. He'd read it tomorrow. Tonight he'd lie here and listen to the heartbeat of a world and try to figure out if the relief he felt was courage or cowardice.</p>
+
+    <p>He didn't sleep. Outside, the light cycle deepened. The amber glow in the canopy shifted toward copper and then toward something darker that didn't have a name in any language he spoke. The building compensated, its walls brightening slightly, the blue-green glow warming to match the cooler air. Somewhere in the forest, the clicks changed pitch. Lower. Slower. The night sounds replacing the day sounds, and Theo lay there cataloging the difference because cataloging was the only thing keeping him from thinking about the door and the dog and the note.</p>
+
+    <p>He lay there and listened to the forest track his position and the artifact beat its patient forty and the building adjust to his temperature, and he thought about a dog who was waiting by a door for a person who was never coming back through it.</p>
+
+    <p>Somewhere outside, the network hummed. A system that had been processing information for two billion years registered a new variable in the outer ring of its most carefully designed structure. Weight, temperature, heart rate, neural frequency. All logged. All filed. All compared to a dataset it had been waiting to match for longer than the species above it had existed.</p>
+
+    <p>And somewhere deeper, past the forest and the settlement and the root clearing where the oldest growth converged, past the sealed nodes and the crystal fields and the boundaries even this vast consciousness couldn't cross, a signal pulsed. Faint. Warm. Patient.</p>
+
+    <p>The same rhythm as the artifact.</p>
+
+    <p>A father, calling from the dark. Saying the only thing he could say across the distance between worlds.</p>
+
+    <p class="no-indent">"I'm here. Keep coming."</p>
+  </div>
+
+  <div class="book-footer">
+    <div class="book-title">Toward the Shape of Time &mdash; November 2026</div>
+    <a href="index.html#signal" class="signal-link">Leave your frequency &rarr;</a>
+  </div>
+
+  <div class="newsletter">
+    <p>Stay in the signal</p>
+    <form action="https://formspree.io/f/xqeypwqz" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="imprint">
+    <a href="https://www.nextpageco.com">Next Page Press</a> &middot; Highland, California
+  </div>
+
+</div>
+
+</body>
+</html>
